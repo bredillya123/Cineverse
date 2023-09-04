@@ -1,22 +1,23 @@
-import logo from './logo.svg';
+import { Routes, Route } from "react-router-dom";
+import { ROUTES } from "./consts";
+import { Home } from "./pages/Home";
+import { Profile } from "./pages/Profile";
+import { NotFound } from "./pages/NotFound/Index"
+import { Root } from "./pages/Root";
 
-function App() {
+const App = () => {
+  const { home, profile } = ROUTES;
+
   return (
-<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Illia</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path={"/"} element={<Home/>}/>
+      <Route path={home} element={<Home/>}/>
+      <Route path={profile} element={<Profile />}/>
+      {/* <Route path="*" element={<Navigate relative to/>}/> */}
+      
+      <Route path="/*" element={<NotFound />} />
+    </Routes>
+  )
 }
 
 export default App;
