@@ -1,5 +1,5 @@
-import { famelyFilms, cartoonsFilms, FilmlistStyled} from '../../../Home/components/FilmList';
-import FilmCard from '../../../Home/components/FilmCard';
+import { famelyFilms, cartoonsFilms, FilmlistStyled} from "../FilmList";
+import FilmCard from '../../../../features/FilmCard';
 import styled from 'styled-components';
 
 export const ProfileFilmList = () => {

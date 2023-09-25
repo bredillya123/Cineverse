@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ProfileFilmList } from '../ProfileFimlList/index';
+import { ProfileFilmList } from '../ProfileFimlList';
 
 export const ProfileMain = () => {
 
@@ -131,7 +131,7 @@ export const ProfileMain = () => {
                 <RedactBtnStyled><span>Редактировать</span></RedactBtnStyled> 
             </ProfileContainerStyled> 
 
-            <ProfileFilmList></ProfileFilmList>
+            <ProfileFilmList/>
 
         </ProfileSectionStyled>
     );

@@ -1,9 +1,8 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { ROUTES } from "./consts";
 import { Home } from "./pages/Home";
 import { Profile } from "./pages/Profile";
 import { NotFound } from "./pages/NotFound"
-import { Root } from "./pages/Root";
 
 
 const App = () => {
@@ -11,7 +10,7 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path={"/"} element={<Home/>}/>
+      <Route path={"/"} element={<Navigate to={home}/>}/>
       <Route path={home} element={<Home/>}/>
       <Route path={profile} element={<Profile />}/>
       <Route path="/*" element={<NotFound />} />

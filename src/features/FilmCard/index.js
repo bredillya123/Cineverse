@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+
 const FilmCardStyled = styled.div`
     width: 47%;
     border-radius: 4px;
     padding: 1%;
     display: flex;
     background: #1d1f26;
+    cursor: pointer;
 
     @media screen and (max-width: 1199px) {
         width: 100%;
@@ -57,17 +59,52 @@ const FilmDescription = styled.p`
     white-space: normal;
 `;
 
+const ReitBlockStyled = styled.div`
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: 32px;
+        font-weight: 500;
+    }
+`;
 
 
 export const FilmCard = (props) => {
+
+    const handleFilmCardClick = () => {
+        // Вызовите функцию openModal и передайте информацию о фильме
+        props.openModal({
+            img: props.image,
+            title: props.title,
+            year: props.year,
+            category: props.category,
+            description: props.description,
+            rate: props.rate,
+            updateRating: props.updateRating
+        });
+    };
+
     return (
-      <FilmCardStyled>
+      <FilmCardStyled onClick={handleFilmCardClick}>
         <FilmImage src={props.image} alt={props.title} />
         <FilmInfo>
           <div>
             <FilmTitle>{props.title}</FilmTitle>
             <p>Дата выхода: {props.year}</p>
+            <ReitBlockStyled>
+                <img width="40" height="40" src="https://cdn.icon-icons.com/icons2/259/PNG/96/ic_star_128_28867.png" alt="star"/>
+                <span>{props.rate}</span>
+            </ReitBlockStyled>
           </div>
+          
           <FilmDescription>{props.description}</FilmDescription>
         </FilmInfo>
       </FilmCardStyled>

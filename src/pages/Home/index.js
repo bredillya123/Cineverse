@@ -1,4 +1,4 @@
-import { FimlList } from "./components/FilmList/index";
+import { FimlList } from "../../features/FilmList";
 import Header from "../components/Header";
 import styled from 'styled-components';
 
@@ -31,14 +31,14 @@ export const Home = () => {
 
     return (
         <>
-            <Header></Header>
+            <Header/>
             <ContainerStyled>                       
                 <MainTitleStyled>Главная</MainTitleStyled>
                 <div>
                     <p>Мы рады приветствовать вас в мире кино и развлечений. На нашем сайте вы найдете огромную коллекцию фильмов, сериалов и мультфильмов для всех возрастов и вкусов. Независимо от того, что вас интересует — драмы, комедии, научная фантастика, приключения или что-то еще — у нас есть что-то особенное для каждого.</p>
                     <h4>Вот любимые категории наших зрителей!</h4>
                 </div>
-                <FimlList></FimlList>
+                <FimlList/>
             </ContainerStyled>
         </>
     );
