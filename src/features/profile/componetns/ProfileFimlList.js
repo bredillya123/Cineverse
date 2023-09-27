@@ -1,8 +1,8 @@
-import { famelyFilms, cartoonsFilms, FilmlistStyled } from "../../FilmList";
+import { famelyFilms, cartoonsFilms, FilmlistStyled } from "../../film-list";
 import FilmCard from '../../../components/FilmCard';
 import styled from 'styled-components';
 
-export const ProfileFilmList = ({ rate }) => {
+export const ProfileFilmList = () => {
 
     const ProfileFilmNavStyled = styled.div`
         width: 100%;
@@ -71,7 +71,7 @@ export const ProfileFilmList = ({ rate }) => {
         }
         
     `;
-    
+
     return ( 
         <div>
             

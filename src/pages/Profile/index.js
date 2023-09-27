@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import { ProfileMain } from "../../features/profile/ProfileMain";
+import { ProfileMain } from "../../features/profile/index";
 import { ContainerStyled, MainTitleStyled } from '../Home/index';
 import styled from 'styled-components';
 

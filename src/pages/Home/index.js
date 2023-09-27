@@ -1,4 +1,4 @@
-import { FimlList } from "../../features/FilmList";
+import { FimlList } from "../../features/film-list";
 import Header from "../components/Header";
 import styled from 'styled-components';
 

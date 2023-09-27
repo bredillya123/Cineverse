@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ProfileFilmList } from '../ProfileFimlList';
+import { ProfileFilmList } from './componetns/ProfileFimlList';
 
 export const ProfileMain = () => {
 
