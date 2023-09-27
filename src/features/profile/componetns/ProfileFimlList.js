@@ -1,6 +1,7 @@
-import { famelyFilms, cartoonsFilms, FilmlistStyled } from "../../film-list";
+import { FilmlistStyled } from "../../film-list";
 import FilmCard from '../../../components/FilmCard';
 import styled from 'styled-components';
+import { useFavorites } from "../../../components/FilmCard/Favorites"; 
 
 export const ProfileFilmList = () => {
 
@@ -72,6 +73,8 @@ export const ProfileFilmList = () => {
         
     `;
 
+    const { favoriteMovies } = useFavorites();
+
     return ( 
         <div>
             
@@ -84,10 +87,7 @@ export const ProfileFilmList = () => {
             </ProfileFilmNavStyled>
 
             <FilmlistStyled>
-                {famelyFilms.slice(1, 3).map((el, id) => (
-                   <FilmCard key={`family-film-${id}`} {... el}/> 
-                ))}
-                {cartoonsFilms.slice(2, 3).map((el, id) => (
+                {favoriteMovies.map((el, id) => (
                    <FilmCard key={`family-film-${id}`} {... el}/> 
                 ))}
             </FilmlistStyled>

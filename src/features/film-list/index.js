@@ -114,7 +114,7 @@ const CategoryTitle = styled.h2`
 
 
 
-export const FimlList = ({ rate }) => {
+export const FimlList = () => {
 
 
 
@@ -130,7 +130,6 @@ export const FimlList = ({ rate }) => {
                         year={film.year}
                         description={film.description}
                         rate={film.rate}
-                        // openModal={openModal}
                     />
                 ))}
             </FilmlistStyled>
@@ -145,7 +144,6 @@ export const FimlList = ({ rate }) => {
                         year={film.year}
                         description={film.description}
                         rate={film.rate}
-                        // openModal={openModal}
                     />
                 ))}
             </FilmlistStyled>

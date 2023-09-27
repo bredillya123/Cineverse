@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter as Router} from 'react-router-dom';
 import GlobalStyles from './styles/GlobalStyles';
+import { FavoritesProvider } from "./components/FilmCard/Favorites";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
-    <GlobalStyles />
-    <App />
-  </Router>
+  <FavoritesProvider>
+    <Router>
+      <GlobalStyles />
+      <App />
+    </Router>
+  </FavoritesProvider>
 );
 
 

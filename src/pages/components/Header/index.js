@@ -92,16 +92,25 @@ const Header = () => {
             display: none;
         }
     `;
+
+    const NavBlockStyled = styled.nav`
+        display: flex;
+        column-gap: 15px;
+    `;
     return (
         <HeaderStyled>
             <ContainerStyled>
                 <HeaderPostionStyled>
-                    <nav>
+                    <NavBlockStyled>
                         <NavElemStyled to="/home">
                             <NavImageStyled src="https://cdn.icon-icons.com/icons2/495/PNG/96/places-home-3_icon-icons.com_48499.png" alt="Главная"/>
                             <NavTextStyled>Главная</NavTextStyled>
                         </NavElemStyled>
-                    </nav>
+                        <NavElemStyled to="/search">
+                            <NavImageStyled src="https://icon-icons.com/icons2/412/PNG/96/Magnifier_41051.png" alt="Поиск"/>
+                            <NavTextStyled>Поиск</NavTextStyled>
+                        </NavElemStyled>
+                    </NavBlockStyled>
                     <LogoStyled to="/home">CineVerse</LogoStyled>
                     <div>
                         <NavElemStyled to="/profile">
