@@ -10,7 +10,7 @@ export const Profile = () => (
         <Header/>
 
         <ContainerStyled>
-            <MainTitleStyled>Profile settings</MainTitleStyled>
+            <MainTitleStyled>Настройки профиля</MainTitleStyled>
 
             <ProfileMain/>
         </ContainerStyled>

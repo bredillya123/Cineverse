@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import FilmCard from '../../components/FilmCard';
+import { PopFilms, filmToShow } from './api';
+
 
 export const famelyFilms = [
     {
@@ -116,11 +118,10 @@ const CategoryTitle = styled.h2`
 
 export const FimlList = () => {
 
-
-
     return (
         <FilmContainerStyled>
-            <CategoryTitle>Семейные</CategoryTitle>
+            <PopFilms/>
+            {/* <CategoryTitle>Семейные</CategoryTitle>
             <FilmlistStyled>                
                 {famelyFilms.map((film, index) => (
                     <FilmCard
@@ -132,13 +133,27 @@ export const FimlList = () => {
                         rate={film.rate}
                     />
                 ))}
-            </FilmlistStyled>
+            </FilmlistStyled> */}
 
-            <CategoryTitle>Мультфильмы</CategoryTitle>
+            {/* <CategoryTitle>Мультфильмы</CategoryTitle>
             <FilmlistStyled> 
                 {cartoonsFilms.map((film, index) => (
                     <FilmCard
                         key={`cartoon-film-${index}`}
+                        image={film.image}
+                        title={film.name}
+                        year={film.year}
+                        description={film.description}
+                        rate={film.rate}
+                    />
+                ))}
+            </FilmlistStyled> */}
+            
+            <CategoryTitle>Популярные</CategoryTitle>
+            <FilmlistStyled>
+                {filmToShow.map((film) => (
+                    <FilmCard
+                        key={`popular-film-${film.id}`}
                         image={film.image}
                         title={film.name}
                         year={film.year}

@@ -2,7 +2,8 @@ import Header from "../components/Header";
 import { ContainerStyled, MainTitleStyled } from '../Home/index';
 import styled from 'styled-components';
 import { useState } from 'react';
-import { famelyFilms, cartoonsFilms, FilmlistStyled } from "../../features/film-list";
+import { FilmlistStyled } from "../../features/film-list";
+import { filmToShow } from "../../features/film-list/api"; 
 import FilmCard from "../../components/FilmCard";
 
 const SearchStyled = styled.section``;
@@ -31,8 +32,7 @@ const SearchInputStyled = styled.input`
 
 export const Search = () => {
 
-    const AllFilms = famelyFilms.concat(cartoonsFilms);
-    // console.log(AllFilmsArray);
+    const AllFilms = filmToShow;
 
     const [value, setVaue] = useState('');
 

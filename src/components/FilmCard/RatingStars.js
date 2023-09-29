@@ -13,6 +13,12 @@ export const Rating = ({ initialRating, onRatingChange }) => {
         &:hover {
             transform: scale(1.1);
         }
+        
+        @media screen and (max-width: 599px) {
+            width: 20px;
+            height: 20px;
+            margin-right: 2px;
+        }
     `;
 
     const [rating, setRating] = useState(initialRating);
@@ -27,7 +33,7 @@ export const Rating = ({ initialRating, onRatingChange }) => {
     }
 
     const stars = [];
-    for (let i = 1; i <= 5; i++){
+    for (let i = 1; i <= 10; i++){
         stars.push(
             <StarStyled 
                 key={i}

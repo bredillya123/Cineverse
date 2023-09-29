@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React, { useState, useEffect  } from 'react';
 import { Rating } from '../../components/FilmCard/RatingStars';
-import { useFavorites } from './Favorites';
+import { useFavorites } from './hooks/Favorites';
 
 const FilmCardStyled = styled.div`
     width: 47%;
@@ -28,6 +28,7 @@ const FilmImage = styled.img`
 `;
 
 const FilmInfo = styled.div`
+    width: 100%;
     padding: 0px 0px 0px 15px;
     display: flex;
     flex-direction: column;
@@ -51,6 +52,7 @@ const FilmTitle = styled.h4`
 `;
 
 const FilmDescription = styled.p`
+    width: 100%;
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;

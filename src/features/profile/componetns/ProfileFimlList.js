@@ -1,7 +1,7 @@
 import { FilmlistStyled } from "../../film-list";
 import FilmCard from '../../../components/FilmCard';
 import styled from 'styled-components';
-import { useFavorites } from "../../../components/FilmCard/Favorites"; 
+import { useFavorites } from "../../../components/FilmCard/hooks/Favorites"; 
 
 export const ProfileFilmList = () => {
 
